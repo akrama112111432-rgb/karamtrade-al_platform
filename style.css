@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: "Cairo", sans-serif;
+    background: #0d0d0d;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 25px;
+    background: #111;
+    box-shadow: 0 0 15px #000;
+}
+
+.hero {
+    padding: 50px 20px;
+}
+
+button {
+    padding: 12px 25px;
+    background: #ffb300;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.features {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 260px;
+    background: #181818;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000;
+}
