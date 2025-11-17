@@ -46,3 +46,25 @@
     }
   ]
 }
+{
+  "name": "KaramTrade AL Platform",
+  "short_name": "KaramTrade",
+  "description": "منصة KaramTrade AL — التداول، المسابقات، التحديات، والمكافآت.",
+  "start_url": "/karamtrade-al_platform/",
+  "scope": "/karamtrade-al_platform/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4b7bec",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
