@@ -27,3 +27,14 @@ self.addEventListener('fetch', evt => {
     caches.match(evt.request).then(res => res || fetch(evt.request))
   );
 });
+self.addEventListener("install", (event) => {
+  self.skipWaiting();
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(clients.claim());
+});
+
+self.addEventListener("fetch", (event) => {
+  event.respondWith(fetch(event.request));
+});
