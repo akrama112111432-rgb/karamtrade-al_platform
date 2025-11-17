@@ -38,3 +38,23 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(fetch(event.request));
 });
+self.addEventListener("install", event => {
+  event.waitUntil(
+    caches.open("karamtrade-cache").then(cache => {
+      return cache.addAll([
+        "/karamtrade-al_platform/",
+        "/karamtrade-al_platform/index.html",
+        "/karamtrade-al_platform/styles.css",
+        "/karamtrade-al_platform/app.js"
+      ]);
+    })
+  );
+});
+
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
+    })
+  );
+});
